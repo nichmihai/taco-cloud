@@ -40,7 +40,7 @@ public class DesignTacoController {
     }
 
     @ModelAttribute(name = "order")
-    public Taco tace() {
+    public Taco taco() {
         return new Taco();
     }
 
@@ -70,6 +70,7 @@ public class DesignTacoController {
         }
 
         Taco saved = designRepo.save(design);
+
         order.addDesign(saved);
 
         log.info("Processing design: " + design);
